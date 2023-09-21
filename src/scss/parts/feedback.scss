@@ -1,0 +1,141 @@
+.feedback {
+    @include adaptive-value("margin-bottom", 150, 70, 1);
+    @include adaptive-value("margin-top", 150, 70, 1);
+
+    .section__scroll {
+        @media (min-width: 768px) {
+            width: auto;
+            overflow-x: visible;
+        }
+        width: 100vw;
+        overflow-x: auto;
+    }
+
+    // .feedback__flex
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .feedback__info
+
+    &__info {
+        max-width: 345px;
+        width: 100%;
+        display: flex;
+        padding: 20px;
+        border-radius: 7px;
+        border: 1px solid #f5f5f5;
+        background-color: #f4f4f4;
+        box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.1);
+        margin-bottom: 25px;
+
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: "";
+            left: 50px;
+            bottom: -30px;
+            width: 60px;
+            height: 30px;
+            clip-path: polygon(57% 0, 0 0, 0 100%);
+            background-color: #f4f4f4;
+        }
+
+        p {
+            margin-left: 8px;
+            width: 100%;
+            @include adaptive-value("font-size", 14, 13, 1);
+            overflow: hidden;
+            max-width: 100%;
+            max-height: 100px;
+            height: 100%;
+        }
+
+        ._google-img {
+            align-self: flex-end;
+            flex: 0 0 32px;
+            border-radius: 50%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        ._read_more {
+            position: absolute;
+            right: 0;
+            top: 84px;
+            width: fit-content;
+            z-index: 1;
+            background-color: #f4f4f4;
+
+            color: #2ea3f2;
+        }
+    }
+
+    // .feedback__quotes
+    &__quotes {
+        height: 16px;
+        fill: #bbbbbb;
+        flex: 0 0 16px;
+    }
+
+    // .feedback__text
+
+    &__text {
+        text-indent: 95px;
+        position: relative;
+    }
+
+    // .feedback__rating
+
+    &__rating {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+        height: fit-content;
+
+        & > :not(:last-child) {
+            margin-right: 2px;
+        }
+
+        svg {
+            width: fit-content;
+            fill: #ffd700;
+            height: 16px;
+            flex: 0 0 16px;
+        }
+    }
+
+    // .feedback__person
+
+    &__person {
+        display: flex;
+        align-items: center;
+        // .feedback__person-img
+
+        &-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid #f5f5f5;
+            margin-right: 20px;
+        }
+
+        // .feedback__person-name
+
+        &-name {
+            color: #555;
+            font-size: 13px;
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: 1.5em;
+        }
+    }
+}
