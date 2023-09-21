@@ -86,17 +86,16 @@ h3 {
 
 ._button {
     display: flex;
-    padding: 18.5px 48px;
+    padding: 16px 48px;
     justify-content: center;
     align-items: center;
     width: fit-content;
     color: #fff;
     border-radius: 3px;
-
+    line-height: 1;
     text-align: center;
     font-size: 14px;
     font-weight: 700;
-    line-height: 1px;
     white-space: nowrap;
     text-transform: uppercase;
 }

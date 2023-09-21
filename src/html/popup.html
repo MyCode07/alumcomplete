@@ -2,9 +2,83 @@
     <div class="popup__container _container">
         <div class="popup__body">
             <button class="popup__close" href="#">
-                <img src="@img/svg/close.svg" alt="">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.8797 16.1291L0.621372 2.87082L2.87124 0.62095L16.1295 13.8792L13.8797 16.1291ZM2.87128 16.1291L0.621368 13.8792L13.8796 0.620941L16.1295 2.87085L2.87128 16.1291Z"
+                        fill="#fff" />
+                </svg>
             </button>
-            <div class="popup__content"></div>
+            <div class="popup__content">
+                <span class="popup__title">OBTENEZ UN DEVIS</span>
+                <div class="popup__flex">
+                    <div class="popup__input">
+                        <label for="name">Votre nom</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="popup__input">
+                        <label for="phone">Téléphone</label>
+                        <input name="phone" id="phone" autocomplete="tel" type="tel">
+                    </div>
+                    <div class="popup__input">
+                        <label for="email">Adresse Couriel</label>
+                        <input name="email" id="email" autocomplete="email" type="email">
+                    </div>
+                    <div class="popup__input">
+                        <label for="textarea">Décrivez brièvement votre projet avec dimensions</label>
+                        <textarea id="textarea"></textarea>
+                    </div>
+                    <div class="popup__input select">
+                        <div>
+                            <label for="location">Localisation du projet</label>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7"
+                                fill="none">
+                                <path d="M1 1L4.59306 5.15864C4.98147 5.60818 5.67385 5.62196 6.07983 5.18822L10 1"
+                                    stroke="#4a4a4a79" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <select name="location" id="location">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+
+                    <p>Ici, vous pouvez télécharger des croquis ou des photos qui nous aideront à estimer avec
+                        précision
+                        votre projet.
+                    </p>
+
+                    <div class="popup__input file">
+                        <span for="file">Fichier
+
+                        </span>
+                        <span class="filename" id="filename">file.pdf <svg class="delete" width="17" height="17"
+                                viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.8797 16.1291L0.621372 2.87082L2.87124 0.62095L16.1295 13.8792L13.8797 16.1291ZM2.87128 16.1291L0.621368 13.8792L13.8796 0.620941L16.1295 2.87085L2.87128 16.1291Z"
+                                    fill="#4A4A4A" />
+                            </svg></span>
+                        <label for="file">
+                            <span class="value">+ Sélectionner un fichier</span>
+                            <input type="file" type="file" id="file">
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="_button _button-fill">
+                    Envoyer
+                </button>
+
+                <a class="abuse"
+                    href="https://www.bitrix24.com/abuse/?b24_form_id=8&b24_address=https%3A%2F%2Fb24-4piunx.bitrix24.com&b24_form_address=https%3A%2F%2Falumcomplete.ca%2Fa-propos%2F"><span>Report
+                        abuse</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20 12a8 8 0 11-16 0 8 8 0 0116 0zm-9.007 2.629v1.807h1.842v-1.807h-1.842zm-.164-3.872H9.104c.008-.422.08-.81.217-1.161.137-.352.328-.657.575-.915a2.59 2.59 0 01.891-.605 3.015 3.015 0 011.168-.217c.555 0 1.019.076 1.39.229.372.153.671.342.898.57a2.106 2.106 0 01.634 1.467c0 .374-.05.683-.147.926a2.287 2.287 0 01-.845 1.062c-.176.12-.342.242-.499.363-.156.121-.295.26-.416.417a1.197 1.197 0 00-.229.586v.446h-1.584v-.528c.024-.336.088-.618.194-.845.105-.226.228-.42.37-.58.14-.16.289-.3.445-.417a7.1 7.1 0 00.434-.352c.133-.117.24-.246.323-.387a.96.96 0 00.111-.528c0-.36-.088-.626-.264-.798-.176-.172-.42-.258-.733-.258-.211 0-.393.041-.546.123a1.089 1.089 0 00-.375.329c-.098.137-.17.297-.217.48-.047.185-.07.382-.07.593z"
+                            fill="#525C69" />
+                    </svg>
+                </a>
+            </div>
         </div>
     </div>
 </div>

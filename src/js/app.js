@@ -9,6 +9,7 @@ import { toTop } from "./static/to-top.js";
 import "./parts/menu.js";
 import "./parts/header.js";
 import "./parts/galler.js";
+import "./parts/popup.js";
 
 toTop();
 replaceDomElements();

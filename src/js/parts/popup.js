@@ -1,4 +1,4 @@
-import { isMobile } from "./isMobile.js";
+import { isMobile } from "../utils/isMobile.js";
 
 const popupAll = document.querySelectorAll('.popup');
 const popupOpenButtons = document.querySelectorAll('[data-open-popup]');
