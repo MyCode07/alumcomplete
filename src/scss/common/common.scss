@@ -6,7 +6,7 @@ body {
     scroll-behavior: smooth;
     line-height: 1.2;
     font-style: normal;
-    color: #3d3d3d;
+    color: #000000;
     font-weight: 400;
     font-size: 16px;
     font-family: Montserrat;
@@ -45,20 +45,13 @@ main {
         padding-inline: $padding + px;
     }
 
-    @media (max-width: 1440px) {
-        padding-inline: 80px;
-    }
-
-    @media (max-width: 1200px) {
-        padding-inline: 25px;
-    }
-
     @media (max-width: 768px) {
         padding-inline: 20px;
     }
 }
 
 section {
+    @include adaptive-value("margin-bottom", 150, 70, 1);
 }
 
 h1 {
@@ -78,9 +71,9 @@ h2 {
 }
 
 h3 {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 125%;
+    @include adaptive-value("font-size", 38, 24, 1);
+    font-weight: 600;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
@@ -98,13 +91,16 @@ h3 {
     font-weight: 700;
     white-space: nowrap;
     text-transform: uppercase;
-}
 
-._button-fill {
     background-color: #005fcd;
-}
-._button-unfill {
-    border: 1px solid #fff;
+    border: 1px solid #005fcd;
+
+    // ._button-unfill
+
+    &-unfill {
+        border-color: #fff;
+        background-color: transparent;
+    }
 }
 
 figure,

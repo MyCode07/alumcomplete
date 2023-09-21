@@ -6,14 +6,6 @@
             .accordion__item-content {
                 grid-template-rows: 1fr;
             }
-
-            .accordion__item-title {
-                margin-bottom: 40px;
-
-                svg {
-                    transform: rotate(-180deg);
-                }
-            }
         }
 
         // .accordion__item-title
@@ -22,9 +14,8 @@
             transition: all 0.3s ease 0s;
             cursor: pointer;
 
-            img,
-            svg {
-                transition: all 0.3s ease 0s;
+            * {
+                pointer-events: none;
             }
         }
 
