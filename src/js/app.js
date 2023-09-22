@@ -10,6 +10,7 @@ import "./parts/menu.js";
 import "./parts/header.js";
 import "./parts/galler.js";
 import "./parts/popup.js";
+import "./parts/slider.js";
 
 toTop();
 replaceDomElements();
