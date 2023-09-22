@@ -1,4 +1,4 @@
-<div class="popup">
+<div class="popup _open">
     <div class="popup__container _container">
         <div class="popup__body">
             <button class="popup__close" href="#">
@@ -50,18 +50,19 @@
                     </p>
 
                     <div class="popup__input file">
-                        <span for="file">Fichier
-
-                        </span>
-                        <span class="filename" id="filename">file.pdf <svg class="delete" width="17" height="17"
+                        <span class="filename-before" for="file">Fichier</span>
+                        <!-- <span class="filename" id="output">
+                            <li></li>
+                            <svg class="delete" width="17" height="17"
                                 viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M13.8797 16.1291L0.621372 2.87082L2.87124 0.62095L16.1295 13.8792L13.8797 16.1291ZM2.87128 16.1291L0.621368 13.8792L13.8796 0.620941L16.1295 2.87085L2.87128 16.1291Z"
                                     fill="#4A4A4A" />
-                            </svg></span>
+                            </svg>
+                        </span> -->
                         <label for="file">
                             <span class="value">+ Sélectionner un fichier</span>
-                            <input type="file" type="file" id="file">
+                            <input class="input-file" type="file"  multiple id="file">
                         </label>
                     </div>
                 </div>

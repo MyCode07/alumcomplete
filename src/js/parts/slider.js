@@ -1,55 +1,37 @@
-import { Swiper, FreeMode, Thumbs, Manipulation, Mousewheel, Lazy, Pagination } from "swiper";
+import Swiper from 'swiper';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
-const projectImages = document.querySelector('.item__images');
-if (projectImages) {
+const sliders = document.querySelectorAll('.swiper');
 
-    const bigSlider = projectImages.querySelector('.item__images-big .swiper');
-    const bigSlides = bigSlider.querySelectorAll('.item__images-big .swiper-slide');
-    const thumbsSlider = projectImages.querySelector('.item__images-small .swiper');
+if (sliders.length) {
+    sliders.forEach(slider => {
+        let prev = slider.querySelector('.prev')
+        let next = slider.querySelector('.next')
+        let pagination = slider.querySelector('.pagination')
 
-    let direction = 'vertical';
-    if (window.innerWidth > 992) direction = 'vertical'
-    else direction = 'horizontal'
-
-    if (bigSlides.length) {
-
-        const swiperThumbs = new Swiper(thumbsSlider, {
+        new Swiper(slider, {
             modules: [
-                FreeMode, Manipulation, Lazy
-            ],
-            direction: direction,
-            freeMode: true,
-            watchSlidesProgress: true,
-            lazy: true,
-            spaceBetween: 15,
-            slidesPerView: 'auto',
-        });
-
-        const swiperMain = new Swiper(bigSlider, {
-            modules: [
-                Thumbs, Manipulation, Mousewheel, Lazy, Pagination
+                Pagination, Navigation, Autoplay,
             ],
             lazy: true,
-
-            direction: direction,
+            loop: true,
             slidesPerView: 1,
-            thumbs: {
-                swiper: swiperThumbs,
+
+            autoplay: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
             },
 
             pagination: {
-                el: ".item__images-count",
-                type: "fraction",
+                el: pagination,
+                clickable: true
             },
 
-            breakpoints: {
-                300: {
-                    mousewheel: false,
-                },
-                993: {
-                    mousewheel: true,
-                }
-            }
-        });
-    }
+            navigation: {
+                prevEl: prev,
+                nextEl: next,
+            },
+        })
+    })
 }

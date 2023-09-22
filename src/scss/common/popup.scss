@@ -191,15 +191,19 @@
         margin-bottom: 10px;
 
         svg {
+            margin-left: 10px;
+            flex: 0 0 12px;
             width: fit-content;
             height: 12px;
             cursor: pointer;
+
+            path {
+                pointer-events: none;
+            }
         }
     }
 
-    span {
-        margin-bottom: 5px;
-        color: #4a4a4a79;
+    li {
         font-size: 14px;
     }
 
@@ -221,6 +225,12 @@
         transform: translate(0, -50%);
         opacity: 0;
         visibility: hidden;
+    }
+
+    .filename-before {
+        font-size: 14px;
+        color: #4a4a4a79;
+        margin-bottom: 5px;
     }
 }
 
