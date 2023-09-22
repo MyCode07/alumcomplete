@@ -8,16 +8,25 @@
         // .accordion__item
 
         &__item {
+            &[data-open] {
+                .accordion__item-title {
+                    svg,
+                    img {
+                        transform: rotate(-180deg);
+                        stroke: #fff;
+                    }
+                }
+            }
+
             // .accordion__item-title
 
             &-title {
                 display: flex;
-                align-items: center;
                 justify-content: space-between;
 
                 span {
                     display: block;
-                    margin-right: 50px;
+                    margin-right: 10px;
                     @include adaptive-value("font-size", 18, 16, 1);
                     font-weight: 600;
                     line-height: 140%;
@@ -27,8 +36,38 @@
                     flex: 0 0 20px;
                     height: 11px;
                     width: fit-content;
+                    stroke: #bfbfbf;
+                    stroke-width: 2px;
+                    fill: transparent;
+                }
+
+                img,
+                svg {
+                    transition: all 0.3s ease 0s;
                 }
             }
+
+            // .accordion__item-content
+
+            &-content {
+                // .accordion__item-content-height
+
+                &-height {
+                    overflow: hidden;
+
+                    div {
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    .grid {
+        gap: 60px 100px;
+
+        @media (max-width: 1024px) {
+            gap: 24px;
         }
     }
 }

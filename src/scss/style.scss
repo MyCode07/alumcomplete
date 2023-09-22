@@ -52,11 +52,11 @@
 // load section
 @import "parts/section";
 
-// load product
-@import "parts/product";
-
 // load grid
 @import "parts/grid";
+
+// load card
+@import "parts/card";
 
 // load feedback
 @import "parts/feedback";
@@ -67,5 +67,5 @@
 // load gallery
 @import "parts/gallery";
 
-
-
+// load reviews
+@import "parts/reviews";

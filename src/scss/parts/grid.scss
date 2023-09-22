@@ -30,4 +30,36 @@
         place-content: center;
         grid-template-columns: repeat(4, 1fr);
     }
+
+    // .grid-item
+
+    &-item {
+        article {
+            min-height: 100%;
+        }
+    }
+
+    &-scroll {
+        @media (max-width: 1024px) {
+            width: 100vw;
+            overflow-x: auto;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .grid {
+                width: fit-content;
+                padding: 0 20px;
+            }
+
+            .grid-item {
+                min-width: 305px;
+                max-width: 305px;
+            }
+        }
+    }
 }
