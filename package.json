@@ -1,5 +1,5 @@
 {
-    "name": "metch",
+    "name": "alum",
     "version": "1.0.0",
     "description": "",
     "main": "gulpfile.js",
@@ -59,7 +59,7 @@
         "gulp-webpcss": "^1.1.1",
         "gulp-zip": "^5.1.0",
         "sass": "^1.53.0",
-        "swiper": "^8.4.7",
+        "swiper": "^10.3.0",
         "three": "^0.140.2",
         "tree": "^0.1.3",
         "vinyl-ftp": "latest",

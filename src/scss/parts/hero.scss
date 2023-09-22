@@ -54,13 +54,17 @@
 
 #alumcomplete {
     background-image: url("@img/alumcomplete/hero-bgi.png");
+
+    .hero__body {
+        max-width: 630px;
+    }
 }
 
 #advantages {
     background-image: url("@img/advantages/advantages-bgi.png");
 
     .hero__body {
-        max-width: 966px !important;
+        max-width: 966px;
         margin-inline: auto;
     }
 }

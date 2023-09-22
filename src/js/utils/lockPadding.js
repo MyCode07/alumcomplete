@@ -1,9 +1,9 @@
 import { isMobile } from "./isMobile.js";
 
-
 const fixedElems = document.querySelectorAll('._fixed');
+const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
 export const lockPadding = () => {
-    const scrollbarWidth = 12;
 
     if (!isMobile.any()) {
         if (fixedElems.length)

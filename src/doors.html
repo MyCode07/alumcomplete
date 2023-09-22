@@ -2,10 +2,13 @@
 "title":"Home",
 })
 
-@@include('./html/header.html')
+@@include('./html/header.html',{
+'class': '_sticky'
+})
 
 <main>
-    <section class="section margin" id="doors">
+
+    <section class="section" id="doors">
         <div class="section__container _container">
             <div class="section__body">
                 <div class="grid grid-3">
@@ -14,8 +17,9 @@
                             <img src="img/doors/doors-1-img.png" alt="">
                         </a>
                         <div class="product__info">
-                            <a href="">Pourquoi choisir des portes coulissantes plutôt que deRs portes pivotantes pour
-                                votre maison</a>
+                            <h3><a href="">Pourquoi choisir des portes coulissantes plutôt que deRs portes pivotantes
+                                    pour
+                                    votre maison</a></h3>
                             <p>En ce qui concerne les portes intérieures, il existe deux types principaux : les
                                 portes coulissantes et les portes
                                 pivotantes.</p>
@@ -27,8 +31,8 @@
                             <img src="img/doors/doors-2-img.png" alt="">
                         </a>
                         <div class="product__info">
-                            <a href="">Quels sont les avantages des portes intérieures en
-                                aluminium ?</a>
+                            <h3><a href="">Quels sont les avantages des portes intérieures en
+                                    aluminium ?</a></h3>
                             <p>Beaucoup plus préconisé pour l’usage à l’intérieur, les portes en aluminium sont
                                 véritablement dans tous les meilleurs
                                 classements des portes les...</p>
@@ -40,7 +44,7 @@
                             <img src="img/doors/doors-2-img.png" alt="">
                         </a>
                         <div class="product__info">
-                            <a href="">Portes battantes : avantages et caractéristiques</a>
+                            <h3><a href="">Portes battantes : avantages et caractéristiques</a></h3>
                             <p>Les portes intérieures ou extérieures, il en existe des dizaines de types. Pour n’en
                                 citer que quelques-unes, les portes
                                 coulissantes à galandage,...</p>
@@ -51,6 +55,7 @@
             </div>
         </div>
     </section>
+
     @@include('./html/contacts.html')
 
 </main>

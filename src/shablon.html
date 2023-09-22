@@ -2,10 +2,13 @@
 "title":"Shablon",
 })
 
-@@include('./html/header.html')
+@@include('./html/header.html', {
+'class':'_sticky'
+})
 
 <main>
-    <section class="section margin shablon">
+
+    <section class="section shablon">
         <div class="section__container _container">
             <div class="section__body">
                 <div class="section__content _reverse _center">
@@ -69,7 +72,8 @@
             </div>
         </div>
     </section>
-    <section class="section ">
+
+    <section class="section">
         <div class="section__container _container">
             <div class="section__body">
                 <div class="section__content _center">
@@ -128,7 +132,8 @@
             </div>
         </div>
     </section>
-    <section class="section margin">
+
+    <section class="section">
         <div class="section__container _container">
             <div class="section__body">
                 <div class="section__content _reverse _center">
@@ -155,7 +160,9 @@
             </div>
         </div>
     </section>
+
     @@include('./html/faq.html')
+
     @@include('./html/gallery.html')
 
     @@include('./html/contacts.html')

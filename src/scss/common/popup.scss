@@ -7,22 +7,23 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    z-index: 5;
+    z-index: 15;
 
     transition: all 0.3s ease 0s;
     opacity: 0;
     visibility: hidden;
-    z-index: -1;
+    pointer-events: none;
 
     &._open {
         opacity: 1;
         visibility: visible;
-        z-index: 3;
+        pointer-events: all;
     }
 
     // .popup__container
 
     &__container {
+        max-width: fit-content;
     }
 
     // .popup__body
@@ -38,6 +39,16 @@
         width: 100%;
         background-color: #fff;
         margin-inline: auto;
+
+        @media (any-hover: hover) {
+            &::-webkit-scrollbar{
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb{
+                background: #005fcd;
+            }
+        }
     }
 
     // .popup__close
