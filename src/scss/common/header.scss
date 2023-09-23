@@ -18,6 +18,20 @@
         padding: 15px 0;
         display: flex;
         align-items: center;
+
+        @media (max-width: 768px) {
+            justify-content: space-between;
+        }
+
+        ._button {
+            max-width: 200px;
+            width: 100%;
+            padding: 12px 20px;
+
+            @media (max-width: 768px) {
+                width: 193px;
+            }
+        }
     }
 
     nav {
@@ -30,7 +44,7 @@
             align-items: center;
 
             & > :not(:last-child) {
-                margin-right: 20px;
+                margin-right: 38px;
             }
 
             li {
@@ -47,7 +61,7 @@
                             visibility: visible;
                         }
 
-                        svg {
+                        button {
                             transform: rotate(180deg);
                         }
                     }
@@ -70,7 +84,7 @@
                     align-items: center;
                     color: #fff;
                     font-size: 14px;
-                    font-weight: 500;
+                    font-weight: 400;
                     text-transform: uppercase;
                     white-space: nowrap;
                 }
@@ -79,27 +93,33 @@
                     display: block;
                     width: 10px;
                     margin-left: 7px;
+                    transition: all 0.3s ease 0s;
 
                     img,
                     svg {
-                        transition: all 0.3s ease 0s;
                         stroke: #fff;
                     }
                 }
 
                 ul {
-                    display: block;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
-                    border-radius: 10px;
+                    border-radius: 0px 0px 5px 5px;
                     background-color: #fff;
                     box-shadow: 0px 0px 159px 0px rgba(0, 0, 0, 0.05);
-                    padding: 20px;
-                    min-width: 186px;
+                    max-width: 1280px;
+
+                    @include adaptive-value("padding-top", 20, 5, 1);
+                    @include adaptive-value("padding-bottom", 20, 5, 1);
+                    @include adaptive-value("padding-left", 180, 20, 1);
+                    @include adaptive-value("padding-right", 180, 20, 1);
 
                     position: absolute;
                     left: 50%;
                     transform: translate(-50%, 0px);
-                    top: 100%;
+                    top: 168%;
 
                     transition: all 0.3s ease 0s;
                     opacity: 0;
@@ -107,13 +127,48 @@
                     visibility: hidden;
 
                     & > :not(:last-child) {
-                        margin-right: 0;
-                        margin-bottom: 10px;
+                        margin-right: 80px;
                     }
 
                     li {
                         a {
-                            color: #005fcd;
+                            color: #292929;
+                            font-size: 14px;
+                            font-weight: 600;
+                            line-height: 14px;
+                        }
+                    }
+
+                    div {
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+
+                        li {
+                            padding: 0;
+                        }
+
+                        svg {
+                            fill: #292929;
+                            width: fit-content;
+                            height: 24px;
+                            width: 24px;
+                            flex: 0 0 24px;
+                            max-width: unset;
+                        }
+
+                        & > :not(:last-child) {
+                            margin-right: 27px;
+                        }
+
+                        & > :nth-last-child(2) {
+                            svg {
+                                stroke: unset;
+                            }
+                        }
+
+                        & > :last-child {
+                            flex: 0 0 29px;
                         }
                     }
                 }
@@ -129,7 +184,11 @@
         svg {
             width: fit-content;
             fill: #fff;
-            @include adaptive-value("height", 12, 12, 1);
+            @include adaptive-value("height", 15, 12, 1);
+        }
+
+        @media (max-width: 768px) {
+            flex: unset;
         }
     }
 

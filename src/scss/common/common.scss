@@ -50,6 +50,16 @@ main {
     }
 }
 
+._container-small {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 1000px;
+
+    @media (max-width: 768px) {
+        padding-inline: 20px;
+    }
+}
+
 section {
     @include adaptive-value("margin-bottom", 150, 70, 1);
 }
@@ -64,8 +74,9 @@ h1 {
 
 h2 {
     @include adaptive-value("font-size", 45, 28, 1);
-    font-weight: 600;
-    line-height: 133%;
+    color: #3d3d3d;
+    font-weight: 500;
+    line-height: 1.13;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -77,9 +88,17 @@ h3 {
     text-transform: uppercase;
 }
 
+p {
+    line-height: 1.62;
+
+    @media (max-width: 768px) {
+        line-height: 1.5;
+    }
+}
+
 ._button {
     display: flex;
-    padding: 16px 48px;
+    padding: 15px 48px;
     justify-content: center;
     align-items: center;
     width: fit-content;
@@ -93,13 +112,27 @@ h3 {
     text-transform: uppercase;
 
     background-color: #005fcd;
-    border: 1px solid #005fcd;
+    border: 1.5px solid #005fcd;
 
     // ._button-unfill
 
     &-unfill {
         border-color: #fff;
         background-color: transparent;
+    }
+
+    // ._button-dark
+
+    &-dark {
+        border: 1px solid #666 !important;
+        color: #666 !important;
+        font-weight: 500 !important;
+    }
+
+    // ._button-weight500
+
+    &-weight500 {
+        font-weight: 500 !important;
     }
 }
 
