@@ -1,7 +1,11 @@
 .section {
     &.mb0 {
-        @media (min-width: 769px) {
+        @media (min-width: 1201px) {
             margin-bottom: 0 !important;
+        }
+
+        @media (max-width: 1200px) and (min-width: 769px) {
+            margin-bottom: 100px !important;
         }
     }
 
