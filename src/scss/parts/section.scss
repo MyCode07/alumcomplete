@@ -28,9 +28,13 @@
         }
     }
 
-    &.pt100 {
+    &.pdt100 {
         .section__info {
-            padding-top: 0;
+            padding-top: 100px;
+
+            @media (max-width: 768px) {
+                padding-top: 30px;
+            }
         }
     }
 
@@ -43,7 +47,7 @@
 
     &.pdt0 {
         .section__info {
-            padding-top: 100px;
+            padding-top: 0;
 
             @media (max-width: 768px) {
                 padding-top: 30px;
