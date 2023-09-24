@@ -16,7 +16,7 @@
     &.title-top {
         .section__info {
             padding-top: 0;
-            @media (min-width: 768px) {
+            @media (min-width: 769px) {
                 position: relative;
                 top: -30px;
             }
@@ -159,7 +159,7 @@
         display: flex;
         justify-content: space-between;
 
-        @media (min-width: 768px) {
+        @media (min-width: 769px) {
             @include adaptive-value("gap", 80, 20, 1);
         }
 
