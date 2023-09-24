@@ -52,7 +52,16 @@
     }
 }
 
-#home {
+#home-hero {
+    background-image: url("@img/home/hero-bgi-desktop.png");
+    background-position: top;
+
+    @media (max-width: 768px) {
+        background-image: url("@img/home/hero-bgi-mobile.png");
+
+        background-position: top right;
+    }
+
     .hero__body {
         p {
             margin: 24px 0 248px 0;
@@ -69,11 +78,6 @@
                 }
             }
         }
-    }
-
-    background-image: url("@img/home/hero-bgi-desktop.png");
-    @media (min-width: 768px) {
-        background-image: url("@img/home/hero-bgi-mobile.png");
     }
 }
 
@@ -96,9 +100,10 @@
     background-image: url("@img/advantages/advantages-bgi.png");
 
     .hero__body {
-        max-width: 966px;
-        margin-inline: auto;
-    }
+        max-width: none;
 
-   
+        @media (min-width: 993px) {
+            padding-right: 37px;
+        }
+    }
 }

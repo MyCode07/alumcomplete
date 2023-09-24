@@ -48,15 +48,23 @@ main {
     @media (max-width: 768px) {
         padding-inline: 20px;
     }
-}
 
-._container-small {
-    width: 100%;
-    margin-inline: auto;
-    max-width: 1000px;
+    // ._container-small
 
-    @media (max-width: 768px) {
-        padding-inline: 20px;
+    &-small {
+        width: 100%;
+        margin-inline: auto;
+        max-width: 1000px;
+
+        @media (max-width: calc(1000 + $padding * 2) + px) {
+            padding-inline: $padding + px;
+            max-width: none;
+            margin-inline: 0;
+        }
+
+        @media (max-width: 768px) {
+            padding-inline: 20px;
+        }
     }
 }
 

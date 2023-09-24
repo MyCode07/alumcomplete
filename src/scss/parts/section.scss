@@ -5,7 +5,7 @@
         }
     }
 
-    &.paddl {
+    &.pdl {
         @media (min-width: 769px) {
             .section__info {
                 padding-left: 49px;
@@ -13,7 +13,7 @@
         }
     }
 
-    &.titletop {
+    &.title-top {
         .section__info {
             padding-top: 0;
             @media (min-width: 768px) {
@@ -26,7 +26,7 @@
         }
     }
 
-    &.boldtitle {
+    &.title-bold {
         h2 {
             color: #000;
             font-weight: 600;
@@ -54,7 +54,7 @@
         }
     }
 
-    &.paddtop0 {
+    &.pdt0 {
         .section__info {
             padding-top: 0;
         }
@@ -434,7 +434,7 @@
         }
     }
 
-    &.mobilebtnbb {
+    &.mobile-btn {
         .section__info {
             div {
                 @media (min-width: 993px) {
@@ -444,7 +444,7 @@
         }
     }
 
-    &.mobilebtnbn {
+    &.desctop-btn {
         .section__info {
             div {
                 @media (max-width: 992px) {
