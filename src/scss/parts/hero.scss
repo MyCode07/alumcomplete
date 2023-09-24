@@ -54,14 +54,14 @@
 
 #home {
     .hero__body {
-        margin: 43px 0 248px 0;
-
         p {
+            margin: 24px 0 248px 0;
+
             br {
                 display: none;
             }
 
-            @media (max-width: 768px) {
+            @media (max-width: 425px) {
                 line-height: 1.4 !important;
 
                 br {
@@ -69,6 +69,11 @@
                 }
             }
         }
+    }
+
+    background-image: url("@img/home/hero-bgi-desktop.png");
+    @media (min-width: 768px) {
+        background-image: url("@img/home/hero-bgi-mobile.png");
     }
 }
 
@@ -94,4 +99,6 @@
         max-width: 966px;
         margin-inline: auto;
     }
+
+   
 }

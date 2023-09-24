@@ -10,14 +10,18 @@
     // .header__container
 
     &__container {
+        position: relative;
     }
 
     // .header__body
 
     &__body {
-        padding: 15px 0;
         display: flex;
         align-items: center;
+
+        @media (max-width: 1024px) {
+            padding: 15px 0;
+        }
 
         @media (max-width: 768px) {
             justify-content: space-between;
@@ -48,10 +52,13 @@
             }
 
             li {
-                position: relative;
                 display: flex;
                 align-items: center;
-                padding: 6px 0;
+                padding: 28px 0;
+
+                @media (max-width: 1024px) {
+                    padding: 0;
+                }
 
                 @media (any-hover: hover) {
                     &:hover {
@@ -102,6 +109,12 @@
                 }
 
                 ul {
+                    position: absolute;
+                    left: 50%;
+                    top: 100%;
+                    transform: translate(-50%, 0px);
+                    width: 100%;
+
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -109,17 +122,7 @@
                     border-radius: 0px 0px 5px 5px;
                     background-color: #fff;
                     box-shadow: 0px 0px 159px 0px rgba(0, 0, 0, 0.05);
-                    max-width: 1280px;
-
-                    @include adaptive-value("padding-top", 20, 5, 1);
-                    @include adaptive-value("padding-bottom", 20, 5, 1);
-                    @include adaptive-value("padding-left", 180, 20, 1);
-                    @include adaptive-value("padding-right", 180, 20, 1);
-
-                    position: absolute;
-                    left: 50%;
-                    transform: translate(-50%, 0px);
-                    top: 168%;
+                    padding: 22px 0;
 
                     transition: all 0.3s ease 0s;
                     opacity: 0;
@@ -131,6 +134,7 @@
                     }
 
                     li {
+                        padding: 0;
                         a {
                             color: #292929;
                             font-size: 14px;
@@ -168,7 +172,11 @@
                         }
 
                         & > :last-child {
-                            flex: 0 0 29px;
+                            svg {
+                                height: 25px;
+                                width: 32px;
+                                flex: 0 0 32px;
+                            }
                         }
                     }
                 }

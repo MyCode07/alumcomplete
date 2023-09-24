@@ -20,6 +20,9 @@
                 position: relative;
                 top: -30px;
             }
+            @media (max-width: 768px) {
+                padding-top: 30px;
+            }
         }
     }
 
@@ -457,7 +460,7 @@
     align-items: center;
     justify-content: space-between;
 
-    @include adaptive-value("margin-bottom", 44, 28, 1);
+    @include adaptive-value("margin-bottom", 44, 20, 1);
 
     @media (max-width: 768px) {
         flex-direction: column;
@@ -647,5 +650,11 @@
     .grid-item {
         min-width: 171px;
         min-height: 120px;
+    }
+
+    ._button {
+        @media (max-width: 425px) {
+            width: 100%;
+        }
     }
 }
