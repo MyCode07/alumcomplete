@@ -12,6 +12,12 @@
         box-shadow: 0px 0px 2px 0px rgba($color: #fff, $alpha: 0.1);
     }
 
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #000;
+        }
+    }
+
     // .header__container
 
     &__container {
@@ -63,16 +69,34 @@
                 align-items: center;
                 padding: 28px 0;
 
+                transition: all 0.3s ease 0s;
+
                 @media (max-width: 1024px) {
                     padding: 0;
                 }
 
                 @media (any-hover: hover) {
                     &:hover {
+                        a {
+                            color: #0c71c3;
+                        }
+
+                        button {
+                            svg {
+                                stroke: #0c71c3 !important;
+                            }
+                        }
+
                         ul {
                             opacity: 1;
                             pointer-events: all;
                             visibility: visible;
+
+                            li {
+                                a {
+                                    color: #000;
+                                }
+                            }
                         }
 
                         button {
@@ -98,7 +122,7 @@
                     align-items: center;
                     color: #fff;
                     font-size: 14px;
-                    font-weight: 400;
+                    font-weight: 500;
                     text-transform: uppercase;
                     white-space: nowrap;
                 }
@@ -124,7 +148,7 @@
 
                     display: flex;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: flex-end;
 
                     border-radius: 0px 0px 5px 5px;
                     background-color: #fff;
@@ -135,9 +159,14 @@
                     opacity: 0;
                     pointer-events: none;
                     visibility: hidden;
+                    padding-right: 222px;
 
-                    & > :not(:last-child) {
+                    & > :first-child {
                         margin-right: 80px;
+                    }
+
+                    & > :nth-child(2) {
+                        margin-right: 124px;
                     }
 
                     li {
@@ -278,8 +307,8 @@
 .multilingual {
     display: flex;
     align-items: center;
-    @include adaptive-value("margin-left", 50, 20, 1);
-    @include adaptive-value("margin-right", 50, 20, 1);
+    margin-left: 50px;
+    margin-right: 50px;
 
     span {
         margin: 0 4px;

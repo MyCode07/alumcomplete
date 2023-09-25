@@ -16,6 +16,13 @@
             }
         }
     }
+       &.pdr {
+        @media (min-width: 769px) {
+            .section__info {
+                padding-right: 49px;
+            }
+        }
+    }
 
     &.title-top {
         .section__info {

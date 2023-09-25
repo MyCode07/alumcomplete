@@ -56,8 +56,8 @@ if (menuLinks.length) {
 }
 
 
-const arrow = `<button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
-  <path d="M1 1L4.59306 5.15864C4.98147 5.60818 5.67385 5.62196 6.07983 5.18822L10 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+const arrow = `<button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7"  >
+  <path d="M1 1L4.59306 5.15864C4.98147 5.60818 5.67385 5.62196 6.07983 5.18822L10 1" stroke-width="1.5" stroke-linecap="round"/>
 </svg></button>
 `;
 
